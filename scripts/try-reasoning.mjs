@@ -7,7 +7,7 @@
  * server by default) and prints your answer next to the correct one:
  *
  *   npm run try-reasoning                                  # local dev server
- *   npm run try-reasoning -- https://your-site.vercel.app  # deployed site
+ *   npm run try-reasoning -- https://my-site-xi-lac.vercel.app  # deployed site
  *
  * The real battery is limited to 3 runs per 24 hours. This script is
  * unlimited: make it green first, then spend a run.

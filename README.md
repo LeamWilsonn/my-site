@@ -52,7 +52,7 @@ to touch (yet):
    from `/api/health` and checks you have ≥ 5 commits spread over days, not
    one bulk dump. Commit early and often so this is free by Challenge 1.
 3. In [Vercel](https://vercel.com): **Add New → Project**, import your repo,
-   deploy. You get a `something.vercel.app` URL.
+   deploy. Your URL is `https://my-site-xi-lac.vercel.app`.
 4. In Vercel: open the **Environment Variables** tab, add `SITE_TOKEN` with
    the same value as your `.env.local`, then redeploy (env vars are read at
    deploy time).
@@ -83,7 +83,7 @@ signatures)"`, and the guestbook on your home page comes alive.
 
 ```bash
 npm run selfcheck                                  # against your local dev server
-npm run selfcheck -- https://your-site.vercel.app  # against your deployed site
+npm run selfcheck -- https://my-site-xi-lac.vercel.app  # against your deployed site
 ```
 
 Selfcheck runs the same Challenge 1 checks the course platform grades:
@@ -146,7 +146,7 @@ npm run selfcheck        # once meta answers, also runs 9 problems + the page ch
 ```
 
 Both accept a deployed URL the same way selfcheck does:
-`npm run try-reasoning -- https://your-site.vercel.app`.
+`npm run try-reasoning -- https://my-site-xi-lac.vercel.app`.
 
 ## Challenge 3: the Decision Simulator
 
@@ -174,7 +174,7 @@ npm run try-simulator    # sends 3 sample games, prints yours vs correct
 npm run selfcheck        # once meta answers, also runs 3 games + the page and DAG check
 ```
 
-Both accept a deployed URL: `npm run try-simulator -- https://your-site.vercel.app`.
+Both accept a deployed URL: `npm run try-simulator -- https://my-site-xi-lac.vercel.app`.
 
 ## The beauty bonus
 

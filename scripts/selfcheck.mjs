@@ -12,7 +12,7 @@
  * meta handshake, three sample games, the /simulator page, and its DAG image.
  *
  *   npm run selfcheck                                  # local dev server
- *   npm run selfcheck -- https://your-site.vercel.app  # your deployed site
+ *   npm run selfcheck -- https://my-site-xi-lac.vercel.app  # your deployed site
  *
  * These checks are a deliberate, small reimplementation of the platform's
  * grader (course-platform/src/lib/challenges/live-site.ts). The template is

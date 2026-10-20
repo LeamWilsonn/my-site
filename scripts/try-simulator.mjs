@@ -7,7 +7,7 @@
  * default) and prints your answer next to the correct one:
  *
  *   npm run try-simulator                                  # local dev server
- *   npm run try-simulator -- https://your-site.vercel.app  # deployed site
+ *   npm run try-simulator -- https://my-site-xi-lac.vercel.app  # deployed site
  *
  * The real battery is limited to 3 runs per 24 hours. This script is
  * unlimited: make it green first, then spend a run.
