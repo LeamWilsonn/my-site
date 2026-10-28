@@ -1,31 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 
-/**
- * The reasoning service's memory (Challenge 2).
- *
- * Why this file exists: on Vercel, your API route runs as a short-lived
- * function that forgets everything the moment it finishes answering. But the
- * challenge requires your /reasoning page to display the same answers your
- * API just gave. The only way a forgetful function and a separate page can
- * agree is to write the answer down somewhere both can read: your Supabase
- * database, the same one the guestbook uses.
- *
- * Two functions, two callers:
- *   - saveLatest(): called by /api/reasoning/decide after every answer.
- *   - loadLatest(): called by the /reasoning page to display them.
- *
- * Setup: run supabase/reasoning.sql once in your Supabase SQL Editor.
- * No new env vars: this reads the same NEXT_PUBLIC_SUPABASE_* values you
- * set in Chapter 3 for the guestbook.
- */
-
 export type ProblemType = "syllogism" | "plausibility" | "bernoulli";
 
-/** A stored problem/answer pair. Both are JSON objects from the wire. */
 export interface LatestEntry {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   problem: Record<string, any>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   answer: Record<string, any>;
 }
 
@@ -43,11 +21,6 @@ function supabase() {
   return createClient(url, key);
 }
 
-/**
- * Overwrite the stored "latest" for one problem type. upsert means
- * "insert the row, or update it if a row with this primary key already
- * exists". One row per type, always the newest, never a growing pile.
- */
 export async function saveLatest(
   type: ProblemType,
   problem: LatestEntry["problem"],
@@ -65,12 +38,6 @@ export async function saveLatest(
   }
 }
 
-/**
- * Read all three "latest" rows back. Any type that has never been answered
- * comes back null, and your page should say "no probe yet" for it instead
- * of crashing. If Supabase isn't configured (or the table doesn't exist
- * yet), everything comes back null: the page stays up either way.
- */
 export async function loadLatest(): Promise<Latest> {
   const empty: Latest = { syllogism: null, plausibility: null, bernoulli: null };
   const client = supabase();
