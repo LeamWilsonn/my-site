@@ -1,10 +1,3 @@
-/**
- * The four-view ladder for a Bernoulli random variable (Station 2.4):
- * table, math, graph, node. Why it exists: the same random variable, shown
- * four ways, is how you prove you can move between a business story and its
- * math. All four views below render from the SAME live theta, so they can
- * never disagree with each other or with your API's answer.
- */
 export function BernoulliFourViews({
   theta,
   onSuccess,

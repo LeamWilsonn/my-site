@@ -1,11 +1,3 @@
-/**
- * The two-way table behind a plausibility update (Station 2.3's counting
- * method, drawn instead of computed). Why it exists: a posterior with no
- * table is just a number someone claims; the table shows a reader exactly
- * where the number comes from. Imagine 10,000 cases and count who lands in
- * each cell. The posterior is then read straight off the "flagged" column:
- * true flags divided by all flags.
- */
 export function TwoWayTable({
   baseRate,
   hitRate,
