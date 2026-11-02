@@ -1,16 +1,5 @@
 import type { CandidateSummary } from "@/lib/simulator-store";
 
-/**
- * One row per candidate stake fraction, drawn from the summary numbers your
- * decide route saved. Each row shows where the simulated final balances
- * landed: the thin bar covers the middle 90% of paths (5th to 95th
- * percentile), the thick bar the middle 50% (25th to 75th), and the tick is
- * the median, the typical investor. The dashed line is the buy-in.
- *
- * The horizontal axis is a log scale: equal distances mean equal
- * multiplication (from $3,000 to $30,000 is the same width as from $30,000
- * to $300,000), so very small and very large balances fit on one chart.
- */
 export function CandidateOutcomes({
   candidates,
   buyIn,
